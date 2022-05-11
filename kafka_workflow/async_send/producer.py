@@ -1,4 +1,5 @@
 from kafka import KafkaProducer
+from config.config import KAFKA_TOPIC
 
 
 def on_send_success(metadata):
@@ -14,7 +15,7 @@ def on_send_failure(exception):
 if __name__ == '__main__':
     producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
                              value_serializer=str.encode)
-    producer.send("hello", "hello").add_callback(on_send_success).add_errback(on_send_success)
+    producer.send(KAFKA_TOPIC, "hello").add_callback(on_send_success).add_errback(on_send_success)
     producer.flush()
 
 
