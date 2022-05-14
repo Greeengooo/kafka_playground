@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 kafka-python = "*"
 jupyter = "*"
+aiokafka = "*"
+mmh3 = "*"
 
 [dev-packages]
 

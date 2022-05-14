@@ -1,1 +1,1 @@
-KAFKA_TOPIC = "my-topic"
+KAFKA_TOPIC = "TestPartition"
