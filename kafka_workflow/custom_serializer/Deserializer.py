@@ -1,4 +1,5 @@
 from Customer import Customer
+from bytebuffer import ByteBuffer
 
 
 class Deserializer:
@@ -6,6 +7,10 @@ class Deserializer:
     def deserialize(data: bytes):
         if data is None:
             return None
-        customer_id = int(data[0])
-        name = str(data[1])
-        return Customer(customer_id, name)
+        buff = ByteBuffer.wrap(bytearray(data))
+        customer_id = buff.get_SBInt8()
+        size_of_name = buff.get_SBInt8()
+        name_bytes = bytearray(size_of_name)
+        buff.get(name_bytes)
+        deserialized_name = name_bytes.decode("utf-8")
+        return Customer(customer_id, deserialized_name)

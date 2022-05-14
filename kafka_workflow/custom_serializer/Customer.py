@@ -10,3 +10,6 @@ class Customer:
     @property
     def name(self):
         return self._name
+
+    def __str__(self):
+        return f"Customer id:{self._customer_id}  name:{self._name}"
