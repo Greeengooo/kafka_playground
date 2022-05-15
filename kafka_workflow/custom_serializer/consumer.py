@@ -8,6 +8,7 @@ from Deserializer import Deserializer
 async def consume():
     consumer = AIOKafkaConsumer(KAFKA_TOPIC,
                                 bootstrap_servers=["localhost:9092"],
+                                key_deserializer=str.encode,
                                 value_deserializer=Deserializer().deserialize)
     await consumer.start()
     try:
