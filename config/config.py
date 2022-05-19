@@ -1,1 +1,1 @@
-KAFKA_TOPIC = "TestPartition"
+KAFKA_TOPIC = "sensors1"
