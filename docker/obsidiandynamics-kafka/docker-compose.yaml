@@ -1,6 +1,6 @@
 services:
   kafdrop:
-    image: obsidiandynamics/kafdrop
+    image: obsidiandynamics-kafka/kafdrop
     restart: "no"
     ports:
       - "9000:9000"
@@ -9,7 +9,7 @@ services:
     depends_on:
       - "kafka"
   kafka:
-    image: obsidiandynamics/kafka
+    image: obsidiandynamics-kafka/kafka
     restart: "no"
     ports:
       - "2181:2181"

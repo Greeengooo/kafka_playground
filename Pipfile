@@ -9,6 +9,12 @@ jupyter = "*"
 aiokafka = "*"
 mmh3 = "*"
 bytebuffer = "*"
+avro = "*"
+avro-to-python = "*"
+markupsafe = "==2.0.1"
+confluent-kafka = "*"
+requests = "*"
+fastavro = "*"
 
 [dev-packages]
 

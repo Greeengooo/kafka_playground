@@ -1,1 +1,1 @@
-KAFKA_TOPIC = "sensors1"
+KAFKA_TOPIC = "topic1"
